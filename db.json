@@ -6,7 +6,10 @@
         "name": "Ski",
         "image": "Under Construction1",
         "description": "Under Construction1",
-        "bid": "Place a Bid"
+        "bid": "Place a Bid",
+        "bid-as-comment": {
+          "cname": "name",
+          "yrsexp": "yrsexp"
       },
 
       {
@@ -14,8 +17,10 @@
         "name": "Lava",
         "image": "Under Construction1",
         "description": "Under Construction1",
-        "bid": "Place a Bid"
+        "bid": "Place a Bid",
+        "bid-as-comment": {
+          "cname": "name",
+          "yrsexp": "yrsexp"
       }
-
-  ]
+      
 }
