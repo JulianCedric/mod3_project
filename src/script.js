@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 
-    // ^^ see notes on lines 1 and 2.
+    // ^^ see notes on lines 1.
     const STOICOVERFLOWDATA = {
         stoics: [
             {
@@ -97,8 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 const stoicIlDetail = document.createElement('li')
                 stoicIlDetail.innerHTML = `
                                             <p>${stoic.description}</p>
+                                            
                 `
-
                 stoicUl.append(stoicIlDetail)
 
             })
