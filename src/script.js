@@ -1,89 +1,100 @@
+// 7/7 JP Notes: Created everything so far in only .js file and .html file (so for now, I just commented in where fetches will prob be). Get Rails to work next.
+    // 7/7_~1p: After lecture, pick back up on line 79 (showDetails function - prob ask Grant?).
+
 document.addEventListener("DOMContentLoaded", () => {
-    
-// Fetch then render one (of currently only two) planet/s:
-              
-          function renderEachPlanet(planet){
-            console.log()
-    
-            const planetsContainer = document.getElementById('planets-container')
-          
-            const planetDiv = document.createElement('div')
-            planetDiv.className = "planet-box"
-            planetDiv.id = planet.id
-            planetDiv.innerHTML = `
-                                  <h2>Name: ${planet.name}</h2>
-                                  <img src="${planet.image}" /img>
-                                  <p>${planet.description}</p>
-                                  <button class="bid-btn">${planet.bid}</button>
-                                  <br>
-                                  <h4 id="bidders">Project Bidders:</h4>
-                                  <p>Under Construction - Try Placing Bid Submissions Here As Comments(??)</p>
-            `
-            planetsContainer.append(planetDiv)
-        }
-    
-        function renderAllPlanets(planets){
-            // console.log()
 
-            planets.forEach(planet => renderEachPlanet(planet))
-        }
-    
-        function fetchPlanetsObject(url){
-            // console.log()
 
-            fetch(url)
-            .then(resp => resp.json())
-            .then(allPlanetsObject => renderAllPlanets(allPlanetsObject))
-            // .then(x => renderAllPlanets(x))
-        }
-        fetchPlanetsObject("http://localhost:3000/planets")
-  
-// 
+    // ^^ see notes on lines 1 and 2.
+    const STOICOVERFLOWDATA = {
+        stoics: [
+            {
+                stoic_id: 1, 
+                principle: "Think Differently", 
+                description: 1, 
+                likes: 1, 
+                comments: "test1"
+            },
+            {
+                stoic_id: 2, 
+                principle: "Alter Your Perspective", 
+                description: 2, 
+                likes: 2, 
+                comments: "test2"
+            },
 
-function postNewBid(url, newBidAsComment){
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify({
-        "name": `${newplanetObject.name}`,
-        "image": `${newplanetObject.image}`, 
-        "description": `${newplanetObject.description}`
-      })
-    })
-    .then(resp => resp.json())
-    .then(newPlanetDataObject => renderEachMonster(newPlanetDataObjecct))
-  }
+            {
+                stoic_id: 3, 
+                principle: "Something Bigger Than Yourself", 
+                description: 3, 
+                likes: 3, 
+                comments: "test3"
+            },
 
-// Step 1. 
-  
-  const planetForm = document.querySelector('.add-planet-form')
-
-// Step 2. 
-
-  planetForm.addEventListener("submit", function(e){
-  
-// Step 3. 
-    e.preventDefault()
-
-// Step 4. 
-
-    const newPlanet = {
-      name: e.target.name.value,
-      image: e.target.image.value,
-      likes: 0 
+            {
+                stoic_id: 4, 
+                principle: "Build Your Inner Citadel", 
+                description: 4, 
+                likes: 4, 
+                comments: "test4"
+            }
+        ]
     }
+    console.log(STOICOVERFLOWDATA)
 
-// Step 6. 
+//////////
 
-    postNewPlanet("http://localhost:3000/planets", newPlanet)
-    planetForm.reset()
+    function renderEachStoic(stoic){
+        console.log("'renderEachStoic' function works.")
+
+        const stoicsUl = document.querySelector('.stoics-list')
+        const stoicLi = document.createElement('li')
+        stoicLi.className = "stoic"
+        stoicLi.id = stoic.id
+        stoicLi.innerHTML = `This is a test: ${stoic.principle}.`
+
+        stoicsUl.append(stoicLi)
+    }
+    // renderEachStoic(STOICOVERFLOWDATA.stoics.first)
     
-  })
+    function renderAllStoics(stoics){
+        console.log("'renderAllStoics' function works.")
+
+        stoics.forEach(stoic => renderEachStoic(stoic))
+    }
+    renderAllStoics(STOICOVERFLOWDATA.stoics)
 
 
 
+
+
+
+
+
+
+
+
+
+//////////
+
+// document.addEventListener("click", function(e) => {
+
+//     if (e.target.className === "stoic")
+//         e.preventDefault() 
+
+//         stoicsUl = e.target.parentNode
+//         // move up and then down this Ul (??)
+
+//         function showDetails(){
+
+//         }
+
+//         // do I need to create a function here to move each stoicLi to the 
+
+    
+
+
+// }) 
+
+//////////
 
 })
