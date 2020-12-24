@@ -61,10 +61,53 @@
             }
             .div1 { grid-area: 2 / 1 / 6 / 2; }
             .div2 { grid-area: 1 / 1 / 2 / 6; }
+
+            #center-btn {
+                display: flex;
+                justify-content: center;
+              }
+              
+              #center-div {
+                display: flex;
+                justify-content: center;
+              }
+              
+              #quote-list {
+                padding: 20px;
+              }
+              
+              #default-size {
+                width: 300px;
+              }
+              
+              #header {
+                text-align: center;
+              }
+
     </style>
     </head>
     <body>
+
+        <h1 id="header">My Favorite Stoic Principles</h1>
+
+        <hr>
+        <br/>
+
+        <div id="center-div">
+            <form id="new-quote-form">
+              <div class="form-group">
+                <input id="default-size" name="quote" type="text" class="form-control" id="new-quote" placeholder="New Principle.. ">
+              </div>
+        
+              <button id="default-size" type="submit" class="btn btn-secondary">Add</button>
+            </form>
+          </div>
+
+          <br/>
+          <hr>
+
         <main>
+
             <div class="master" id="master">
                 <header>
                     <h1>Stoic Principles</h1>    
@@ -73,6 +116,7 @@
                         <ul class="stoics-list"></ul>
                     </main>
             </div>
+
             <div class="master" id="detail">
                 <header>
                     <h1>Stoic Principle</h1>
