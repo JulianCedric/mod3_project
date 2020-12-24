@@ -73,8 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     let x = stoic
                 } 
                 const stoicUl = document.querySelector('.stoic-list')
-            
-                console.log("My 'x & y' variables work!")
 
                 const stoicIlDetail = document.createElement('li')
                 stoicIlDetail.innerHTML = `

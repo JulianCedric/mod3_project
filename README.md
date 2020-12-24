@@ -1,13 +1,19 @@
 # mod3_project
 
-CRUD: 
+THE MAIN IDEA:
+This app allows users to keep track of their favorite Stoic Principles. 
 
-As a user, I can: 
+CRUD USER ACTIONS: 
+Users can.. 
 
     CREATE: 
+                .. add a new principle.
 
     READ: 
+                .. all/each principle/s.
 
     UPDATE:
+                .. each principle.
 
     DELETE: 
+                .. each principle.
