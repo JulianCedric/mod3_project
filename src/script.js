@@ -100,11 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
                                             
                 `
                 stoicUl.append(stoicIlDetail)
-
             })
-
-    })
-    
+    })    
 })
 
 
@@ -146,9 +143,3 @@ document.addEventListener("DOMContentLoaded", () => {
         // }
 
         // do I need to create a function here to move each stoicLi to the 
-
-
-
-
-// //////////
-
