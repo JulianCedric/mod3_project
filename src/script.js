@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         ]
     }
-    console.log('DATA: ', DATA)
+    console.log('DATA:', DATA)
 
     function renderEachStoic(stoic){
         const stoicsUl = document.querySelector('.stoics-list')

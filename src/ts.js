@@ -17,8 +17,12 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const DATA = []
+    const DATA = {}
 
-    function renderAllData
+    function renderEachStoic(stoic)
+    function renderAllStoics(stoics)
+    renderAllStoics(DATA.stoics)
+
+    document.addEventListener("click", function(e) {})
 
 })

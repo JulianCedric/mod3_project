@@ -1,15 +1,11 @@
-<!-- 7/7 JP Notes: Created everything so far in only .js file and .html file (so for now, I just commented in where fetches will probably be). Get Rails to work next. -->
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <script src="src/script.js"></script>
     <meta charset="UTF-8">
     <title>Stoic Overflow</title>
     <meta name="viewport" content="width=device-width">
-
     <style>
-
         *{
             padding: 0;
             margin: 0;
@@ -56,10 +52,6 @@
             padding: 0.2rem 1rem 1.2rem 1rem;
             margin: 0.5rem 1rem 0.8rem;
         }
-        .principle{
-
-        }
-
         .parent {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -67,67 +59,28 @@
             grid-column-gap: 0px;
             grid-row-gap: 0px;
             }
-            
             .div1 { grid-area: 2 / 1 / 6 / 2; }
             .div2 { grid-area: 1 / 1 / 2 / 6; }
-
     </style>
-
-</head>
-
+    </head>
     <body>
-
         <main>
-
-
-
-        <div class="master" id="master">
-            <header>
-                <h1>Stoic Principles</h1>    
-            </header>
-                <main>
-                    <ul class="stoics-list"></ul>
-                </main>
-        </div>
-
-
-
-        <div class="master" id="detail">
-            <header>
-                <h1>Stoic Principle</h1>
-            </header>
-                <main>
-                    <ul class="stoic-list"></ul>
-
-
-                    
-                </main>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </main>
-
-</body>
+            <div class="master" id="master">
+                <header>
+                    <h1>Stoic Principles</h1>    
+                </header>
+                    <main>
+                        <ul class="stoics-list"></ul>
+                    </main>
+            </div>
+            <div class="master" id="detail">
+                <header>
+                    <h1>Stoic Principle</h1>
+                </header>
+                    <main>
+                        <ul class="stoic-list"></ul>                    
+                    </main>
+            </div>
+        </main>
+    </body>
 </html>
