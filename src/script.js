@@ -45,8 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log('DATA: ', DATA)
 
     function renderEachStoic(stoic){
-        console.log(" 'renderEachStoic' function works.")
-
         const stoicsUl = document.querySelector('.stoics-list')
         const stoicLi = document.createElement('li')
         stoicLi.className = "stoic"
@@ -56,16 +54,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         stoicsUl.append(stoicLi)
     }
-    // renderEachStoic(STOICOVERFLOWDATA.stoics.first)
     
     function renderAllStoics(stoics){
-        console.log(" 'renderAllStoics' function works.")
-
         stoics.forEach(stoic => renderEachStoic(stoic))
     }
-    renderAllStoics(STOICOVERFLOWDATA.stoics)
-
-// fetch, rails
+    renderAllStoics(DATA.stoics)
 
 //////////
 
@@ -78,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
             (y)?y.classList.remove('y'):null;
             e.target.classList.add('y'); 
         
-            STOICOVERFLOWDATA.stoics.forEach(stoic => {
+            DATA.stoics.forEach(stoic => {
                 if (stoic.id === id){
                     let x = stoic
                 } 
