@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const stoicLi = document.createElement('li')
         stoicLi.className = "stoic"
         stoicLi.setAttribute = ('data-key', stoic.id)
-        // stoicLi.id = `${stoic.id}`
         stoicLi.innerHTML = `${stoic.principle}.`
 
         stoicsUl.append(stoicLi)
@@ -59,8 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
         stoics.forEach(stoic => renderEachStoic(stoic))
     }
     renderAllStoics(DATA.stoics)
-
-//////////
 
     document.addEventListener("click", function(e) {
         e.preventDefault() 
