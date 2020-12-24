@@ -1,10 +1,6 @@
-// 7/7 JP Notes: Created everything so far in only .js file and .html file (so for now, I just commented in where fetches will prob be). Get Rails to work next.
-
 document.addEventListener("DOMContentLoaded", () => {
 
-
-    // ^^ see notes on lines 1.
-    const STOICOVERFLOWDATA = {
+    const DATA = {
         stoics: [
             {
                 id: 1, 
@@ -46,11 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         ]
     }
-    console.log(STOICOVERFLOWDATA)
-
-//////////
-
-//////////
+    console.log('DATA: ', DATA)
 
     function renderEachStoic(stoic){
         console.log(" 'renderEachStoic' function works.")
@@ -104,15 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })    
 })
 
-
-
-
-
-
-
-
-
-
+//
 
 //     const stoicUlDetails = document.querySelector('.stoic-list')
     
@@ -133,7 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
 //         e.preventDefault() 
 
 //         moveStoicFromMasterToDetail()
-
 
         // stoicsUl = e.target.parentNode
         // // move up and then down this Ul (??)
