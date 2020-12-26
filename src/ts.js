@@ -18,3 +18,28 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("click", function(e) {})
 
 })
+
+// 2020.12.26 - SAT: 
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    fetchAll(url)
+
+// Read
+
+    renderEach(eachData) {
+
+    }
+
+    renderAll(allData) {
+        allData.forEach(eachData => renderEach(eachData))
+    }
+
+    fetchAll(url) {
+        fetch(url)
+        .then(r => r.json())
+        .then(allData => renderAll(allData))
+    }
+    renderAll(allData)
+
+}) 
